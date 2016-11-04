@@ -39,6 +39,7 @@
 
 @protocol AudioPlayerViewDelegate<NSObject>
 -(void) audioPlayerViewPlayFromHTTPSelected:(AudioPlayerView*)audioPlayerView;
+-(void) audioPlayerViewPlayFromIcecastSelected:(AudioPlayerView*)audioPlayerView;
 -(void) audioPlayerViewQueueShortFileSelected:(AudioPlayerView*)audioPlayerView;
 -(void) audioPlayerViewPlayFromLocalFileSelected:(AudioPlayerView*)audioPlayerView;
 -(void) audioPlayerViewQueuePcmWaveFileSelected:(AudioPlayerView*)audioPlayerView;
@@ -58,6 +59,7 @@
 	UIButton* playButton;
     UIButton* stopButton;
 	UIButton* playFromHTTPButton;
+    UIButton* playFromIcecastButton;
     UIButton* queueShortFileButton;
 	UIButton* queuePcmWaveFileFromHTTPButton;
 	UIButton* playFromLocalFileButton;

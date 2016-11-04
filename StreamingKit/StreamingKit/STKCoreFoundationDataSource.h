@@ -34,6 +34,8 @@
 
 #import "STKDataSource.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @class STKCoreFoundationDataSource;
 
 @interface CoreFoundationDataSourceClientInfo : NSObject
@@ -43,9 +45,10 @@
 
 @interface STKCoreFoundationDataSource : STKDataSource
 {
+@public
+    CFReadStreamRef stream;
 @protected
     BOOL isInErrorState;
-    CFReadStreamRef stream;
     NSRunLoop* eventsRunLoop;
 }
 
@@ -61,3 +64,5 @@
 -(CFStreamStatus) status;
 
 @end
+
+NS_ASSUME_NONNULL_END
